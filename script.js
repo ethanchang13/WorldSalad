@@ -15,6 +15,10 @@ document.getElementById("generateStory").addEventListener("click", function() {
         Luckily, <strong>${sidekick}</strong> saved the night, and everyone went home with a full stomach.</p>
     `;
 
-    //display story
-    document.getElementById("story").innerHTML = myStory;
+    //modal body
+    document.getElementById("modalStoryContent").innerHTML = myStory;
+
+    //show modal
+    var myModal = new bootstrap.Modal(document.getElementById('storyModal'));
+    myModal.show();
 });
