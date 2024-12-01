@@ -5,7 +5,7 @@ document.getElementById("generateStory").addEventListener("click", function() {
     const strangeGuest = document.getElementById("guest").value || "a raccoon";
     const partyLocation = document.getElementById("place").value || "a laundromat";
     const giftItem = document.getElementById("item").value || "deodorant";
-    const heroName = document.getElementById("hero").value || "Hero";
+    const heroName = document.getElementById("hero").value || "hero";
 
     // Story
     const myStory = `
