@@ -1,24 +1,24 @@
 document.getElementById("generateStory").addEventListener("click", function() {
-    //prompts
-    const userName = document.getElementById("userName").value || "The Guest";
-    const weapon = document.getElementById("weapon").value || "pickled eggplant";
-    const enemy = document.getElementById("enemy").value || "a mime artist";
-    const place = document.getElementById("place").value || "underwater lair";
-    const treasure = document.getElementById("treasure").value || "a rubber chicken";
-    const sidekick = document.getElementById("sidekick").value || "the inflatable flamingo";
+    // User inputs
+    const userName = document.getElementById("userName").value || "The Mysterious Guest";
+    const mainDish = document.getElementById("weapon").value || "pickled eggplant surprise";
+    const strangeGuest = document.getElementById("enemy").value || "a garden gnome with sunglasses";
+    const partyLocation = document.getElementById("place").value || "a treehouse with Wi-Fi";
+    const giftItem = document.getElementById("treasure").value || "a rubber chicken wearing a cape";
+    const sidekickName = document.getElementById("sidekick").value || "Captain Snuggles the Cat";
 
-    //create story
+    // Story
     const myStory = `
-        <h2>What Happened at the Dinner Party</h2>
-        <p><strong>${userName}</strong> arrived at the party, where the main dish was <strong>${weapon}</strong>. 
-        Things got weird when <strong>${enemy}</strong> showed up at the <strong>${place}</strong> and brought <strong>${treasure}</strong> as a gift. 
-        Luckily, <strong>${sidekick}</strong> saved the night, and everyone went home with a full stomach.</p>
+        <p><strong>${userName}</strong> threw a dinner party at <strong>${partyLocation}</strong>, featuring <strong>${mainDish}</strong> as the main dish. 
+        The night turned crazy when <strong>${strangeGuest}</strong> showed up carrying <strong>${giftItem}</strong>, claiming it was a family heirloom. 
+        Just as chaos erupted, <strong>${sidekickName}</strong> leapt onto the table, yelled, "Not on my watch!" and saved the day. 
+        Everyone left with full stomachs... except the rubber chicken, which is still stuck in the chandelier.</p>
     `;
 
-    //modal body
+    // Add story to modal
     document.getElementById("modalStoryContent").innerHTML = myStory;
 
-    //show modal
+    // Show modal
     var myModal = new bootstrap.Modal(document.getElementById('storyModal'));
     myModal.show();
 });
